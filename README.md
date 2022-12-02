@@ -42,6 +42,7 @@ public Kasa()
 
 Her iki nesne kurucusu değişkenlere başlangıç değerini atar.
 Ayrıca ekrana karşılama mesajı yazdırır (parametresiz olan çağırıldığında Hoş geldin, parametreli çağrılığında (Hoş geldin +isim)
+
 Sınıfın;
 
 -	public void hesapla (int secim, double fiyat)
