@@ -104,11 +104,11 @@ GPS cümlelerinin kuralları şunlardır:
 -	$’dan ilk virgüle olan kısım başlıktır.
 -	Başlık cümlenin türünü belirtir.
 -	Örnekte verilen cümleler içerisinde 4 alan tanımlanmıştır.
--	Sayı ile verilen ilk alan enlem değeri
+-   Sayı ile verilen ilk alan enlem değeri
 -	Sayı ile verilen ikinci alan boylam değeri
--	Örnekte N ile belirtilen enlemin kuzey ve güney yarım küre oluşudur, örnekte kuzey yarımkürede bulunmaktadır (North)
+- Örnekte N ile belirtilen enlemin kuzey ve güney yarım küre oluşudur, örnekte kuzey yarımkürede bulunmaktadır (North)
 
--	Örnekte E ile belirtilen boylamın doğu veya batı boylamı olduğudur, örnekte doğuda bulunmaktadır (East).
+-  	Örnekte E ile belirtilen boylamın doğu veya batı boylamı olduğudur, örnekte doğuda bulunmaktadır (East).
 
 Bu bilgiler ışığında program yazmanız istenmektedir. Program yazarken;
 

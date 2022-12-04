@@ -12,6 +12,8 @@ public class GPSAlicisi {
             isActive = true;
         }else{
             isActive = false;
+            System.out.println("Uydu aktif değil !");
+            System.exit(0);
         }
     }
 
@@ -37,16 +39,25 @@ public class GPSAlicisi {
         while(randomNum == 0){
             randomNum = (int)(Math.random()*40);
         }
-        return randomNum;
+        return 30;
     }
 
     public void uydudanVeriAl(int cumleCesidi){
         switch (cumleCesidi) {
             case 1:
+                setGpsValue("$GPGGA,N,40,30,E");
                 
                 break;
-        
+            case 2:
+                setGpsValue("$GPRMC,41,N,E,31");
+                
+                break;
+            case 3:
+                setGpsValue("$GPGLL,N,E,42,32");
+                
+                break;
             default:
+                
                 break;
         }
 

@@ -9,14 +9,10 @@ public class Uydu {
 
     public Uydu(GPSAlicisi gA){
         System.out.println("Gps Alıcısına Bağlanıldı !");
-
+        gA.uydudanVeriAl(veriTuruSec());
 
     }
     
-
-    public void veriTuruSec(int veriTuru){
-
-    }
 
     private int veriTuruSec(){
         int randNum = (int)(Math.random()*10);
