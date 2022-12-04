@@ -2,13 +2,17 @@ package GPS;
 
 public class Test {
     public static void main(String[] args) {
-        GPSAlicisi g1 = new GPSAlicisi();
+        GPSAlicisi g1 = new GPSAlicisi();       
+        
+        if(!g1.isActive){
+            System.out.println("Sıcaklık :"+g1.getSicaklik()+"°C");
+            System.out.println("Sıcaklık uygun değil !");
+            System.exit(0);
+        }
+        
         Uydu u = new Uydu(g1);
-
-
+        
         GPSProgrami g = new GPSProgrami(g1);
-        
-        
 
    
     }

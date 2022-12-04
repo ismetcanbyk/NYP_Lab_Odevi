@@ -2,7 +2,7 @@ package GPS;
 
 
 public class GPSAlicisi {
-    private int Sicaklik;
+    private static int Sicaklik;
     public boolean isActive;
     private String gpsValue;
 
@@ -12,8 +12,6 @@ public class GPSAlicisi {
             isActive = true;
         }else{
             isActive = false;
-            System.out.println("Uydu aktif değil !");
-            System.exit(0);
         }
     }
 
@@ -33,13 +31,13 @@ public class GPSAlicisi {
         this.gpsValue = gpsValue;
     }
 
-    private int sicaklikOlc(){
+    private static int sicaklikOlc(){
         
         int randomNum = (int)(Math.random()*40);
         while(randomNum == 0){
             randomNum = (int)(Math.random()*40);
         }
-        return 30;
+        return randomNum;
     }
 
     public void uydudanVeriAl(int cumleCesidi){
