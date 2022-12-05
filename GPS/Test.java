@@ -5,7 +5,7 @@ public class Test {
         GPSAlicisi g1 = new GPSAlicisi();       
         
         if(!g1.isActive){
-            System.out.println("Sıcaklık :"+g1.getSicaklik()+"°C");
+            System.out.println("Sıcaklık değeri :"+g1.getSicaklik());
             System.out.println("Sıcaklık uygun değil !");
             System.exit(0);
         }

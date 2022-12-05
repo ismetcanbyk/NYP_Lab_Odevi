@@ -7,7 +7,7 @@ public class Deneme {
         
         Kasiyer k2 =new Kasiyer("can");
 
-        k2.isVakti();
+        //k2.isVakti();
         
     }
 }

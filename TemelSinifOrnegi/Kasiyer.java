@@ -1,6 +1,8 @@
 package TemelSinifOrnegi;
 import java.util.Scanner;
 
+import javax.swing.text.html.HTMLDocument.HTMLReader.IsindexAction;
+
 public class Kasiyer {
 
     Scanner inp = new Scanner(System.in);
@@ -20,7 +22,6 @@ public class Kasiyer {
         double fiyat;
         boolean isFinish = true;
 
-
         System.out.println("\n\t----Yiyecek Kodları----");
         System.out.println("Salata \t\t=> 1");
         System.out.println("Hamburger \t=> 2");
@@ -39,8 +40,17 @@ public class Kasiyer {
                 yiyecekKodu = 5;
             }
             if(yiyecekKodu > 5 || yiyecekKodu <= 0){
-                System.out.println("Geçersiz kod !");
-                break;
+                System.out.println("\nGeçersiz kod !");
+                boolean check = true;
+                
+                while(check){
+                    System.out.print("Tekrar giriniz : ");
+                    yiyecekKodu = inp.nextInt();
+
+                    if(yiyecekKodu > 0 && yiyecekKodu <=5){
+                        check = false;
+                    }
+                }
             }
 
             if (yiyecekKodu == 5) {
