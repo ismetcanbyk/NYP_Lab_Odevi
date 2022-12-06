@@ -1,8 +1,6 @@
 package TemelSinifOrnegi;
 import java.util.Scanner;
 
-import javax.swing.text.html.HTMLDocument.HTMLReader.IsindexAction;
-
 public class Kasiyer {
 
     Scanner inp = new Scanner(System.in);
@@ -28,7 +26,7 @@ public class Kasiyer {
         System.out.println("Pizza \t\t=> 3");
         System.out.println("Tatlı \t\t=> 4");
         System.out.println("\n=>Çıkış yapmak ve fiş yazdırmak için : 5'e basın");
-        
+        System.out.println("\n");
         
         do {
             

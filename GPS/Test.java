@@ -10,6 +10,8 @@ public class Test {
             System.exit(0);
         }
         
+        //Uydu u2 =  new Uydu(); 
+
         Uydu u = new Uydu(g1);
         
         GPSProgrami g = new GPSProgrami(g1);
