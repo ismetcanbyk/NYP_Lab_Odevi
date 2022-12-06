@@ -34,7 +34,6 @@ public class GPSAlicisi {
     private static int sicaklikOlc(){
         
         int randomNum = (int)(Math.random()*40+1);
-        System.out.println(randomNum);
         return randomNum;
     }
 
