@@ -3,8 +3,8 @@ package GPS;
 public class Uydu {
 
     public Uydu(){
-        System.out.println("Giriş parametresi bulunamadı !");
-        System.exit(0);
+        System.out.println("Uyan !");
+        
     }
 
     public Uydu(GPSAlicisi gA){
