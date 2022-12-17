@@ -1,6 +1,5 @@
 package OgrenciSistemi;
 
-import java.util.Random;
 
 public class Yazilim extends Student {
 
@@ -11,10 +10,15 @@ public class Yazilim extends Student {
 
     @Override
     public String createStudentNum() {
-        String stdNum ;
-        int rnd = (int) (Math.random()*1000);
-        stdNum = getEntryDate()+"12"+rnd;
-       
+        int a = getOgrenciAd().hashCode();
+        int b = getOgrenciSoyad().hashCode();
+        if (getOgrenciSoyad().hashCode()<0) {
+            b = -1*b;
+        }
+        if(getOgrenciAd().hashCode()<0){
+            a = -1*a;
+        }
+        String stdNum = a+""+b;
         return stdNum;
     }
 
@@ -26,9 +30,7 @@ public class Yazilim extends Student {
        System.out.println("Öğrenci numarası : "+createStudentNum());
        System.out.println("Fakülte : "+getFakulte());
        System.out.println("Bölüm : "+getBolum());
-       System.out.println("Giriş tarihi : "+getEntryDate());
-
-        
+       System.out.println("Giriş tarihi : "+getEntryDate()); 
     }
     
 }
