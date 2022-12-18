@@ -13,14 +13,21 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Yazilim y1 = new Yazilim("ismet", "bıyık", 2021, "HFTTF");
-        Yazilim y2 = new Yazilim("can", "byk", 2000, "HFTTF");
+        Yazilim y1 = new Yazilim("İsmet", "Bıyık", 2021, "hfttf");
+        Yazilim y2 = new Yazilim("Can", "Karataş", 2020, "hfttf");
+        Mekatronik m = new Mekatronik("Ahmet", "Yılmaz", 2019, "hfttf");
+        Enerji e1 = new Enerji("Furkan", "Aslan", 2017, "hfttf");
+        Makine mak1 = new Makine("Alperen", "Öz", 2018, "hfttf");
+        Makine mak2 = new Makine("Elif", "Yılmazer", 2020, "hfttf");
 
         yzlm.add(y1);
         yzlm.add(y2);
+        mek.add(m);
+        enerji.add(e1);
+        makine.add(mak1);
+        makine.add(mak2);
 
         menu();
-
     }
 
     public static void menu() {
@@ -105,14 +112,16 @@ public class Main {
                 break;
             case 6:
                 System.out.println("\t\t------Bölümler------");
-                System.out.println("1)Yazılım Mühendisliği " +"\t\t\t\t"+ yzlm.size() + " öğrenci bulunmakta");
-                System.out.println("2)Mekatronik Mühendisliği " +"\t\t\t"+ mek.size() + " öğrenci bulunmakta");
-                System.out.println("3)Makine Mühendisliği " +"\t\t\t\t"+ makine.size() + " öğrenci bulunmakta");
-                System.out.println("4)Enerji Sistemleri Mühendisliği " +"\t\t"+ enerji.size() + " öğrenci bulunmakta");
-                System.out.println("5)Elektrik Mühendisliği " +"\t\t\t"+ elektrik.size() + " öğrenci bulunmakta");
-                System.out.println("6)Bütün bölümler"
-                        +"\t\t\t\t"+ (yzlm.size() + mek.size() + makine.size() + enerji.size() + elektrik.size())
+                System.out.println("1)Yazılım Mühendisliği " + "\t\t\t\t" + yzlm.size() + " öğrenci bulunmakta");
+                System.out.println("2)Mekatronik Mühendisliği " + "\t\t\t" + mek.size() + " öğrenci bulunmakta");
+                System.out.println("3)Makine Mühendisliği " + "\t\t\t\t" + makine.size() + " öğrenci bulunmakta");
+                System.out
+                        .println("4)Enerji Sistemleri Mühendisliği " + "\t\t" + enerji.size() + " öğrenci bulunmakta");
+                System.out.println("5)Elektrik Mühendisliği " + "\t\t\t" + elektrik.size() + " öğrenci bulunmakta");
+                System.out.println("6)Bütün bölümler" + "\t\t\t\t"
+                        + (yzlm.size() + mek.size() + makine.size() + enerji.size() + elektrik.size())
                         + " öğrenci bulunmakta");
+                System.out.println("7)Menü");
                 System.out.print("Listelemek istediğiniz bölümü girin : ");
                 int sec = inp.nextInt();
                 print(sec);
@@ -128,83 +137,137 @@ public class Main {
     }
 
     public static void print(int a) {
+        Scanner inp = new Scanner(System.in);
+
         switch (a) {
             case 1:
-                System.out.println("\t\t-----Yazılım Mühendisliği-----");
+                System.out.println("\n\t\t-----Yazılım Mühendisliği-----");
                 for (Yazilim yazilim : yzlm) {
                     System.out.println("Öğrencinin ismi :" + yazilim.getOgrenciAd() + " " + yazilim.getOgrenciSoyad()
                             + "\tGiriş tarihi : " + yazilim.getEntryDate() + "\tÖğrenci numarası : "
                             + yazilim.hashCode() + "\tFakülte : " + yazilim.getFakulte());
                 }
+                System.out.println("\nMenüye gitmek için 1 e basın");
+                switch (inp.nextInt()) {
+                    case 1:
+                        menu();
+                        break;
+                    default:
+                        break;
+                }
+
                 break;
             case 2:
-                System.out.println("\t\t-----Mekatronik Mühendisliği-----");
+                System.out.println("\n\t\t-----Mekatronik Mühendisliği-----");
                 for (Mekatronik yazilim : mek) {
                     System.out.println("Öğrencinin ismi :" + yazilim.getOgrenciAd() + " " + yazilim.getOgrenciSoyad()
                             + "\tGiriş tarihi : " + yazilim.getEntryDate() + "\tÖğrenci numarası : "
                             + yazilim.hashCode() + "\tFakülte : " + yazilim.getFakulte());
+                }
+                System.out.println("\nMenüye gitmek için 1 e basın");
+                switch (inp.nextInt()) {
+                    case 1:
+                        menu();
+                        break;
+                    default:
+                        break;
                 }
                 break;
             case 3:
-                System.out.println("\t\t-----Makine Mühendisliği-----");
+                System.out.println("\n\t\t-----Makine Mühendisliği-----");
                 for (Makine yazilim : makine) {
                     System.out.println("Öğrencinin ismi :" + yazilim.getOgrenciAd() + " " + yazilim.getOgrenciSoyad()
                             + "\tGiriş tarihi : " + yazilim.getEntryDate() + "\tÖğrenci numarası : "
                             + yazilim.hashCode() + "\tFakülte : " + yazilim.getFakulte());
                 }
+                System.out.println("\nMenüye gitmek için 1 e basın");
+                switch (inp.nextInt()) {
+                    case 1:
+                        menu();
+                        break;
+                    default:
+                        break;
+                }
                 break;
             case 4:
-                System.out.println("\t\t-----Enerji Sistemleri Mühendisliği-----");
+                System.out.println("\n\t\t-----Enerji Sistemleri Mühendisliği-----");
                 for (Enerji yazilim : enerji) {
                     System.out.println("Öğrencinin ismi :" + yazilim.getOgrenciAd() + " " + yazilim.getOgrenciSoyad()
                             + "\tGiriş tarihi : " + yazilim.getEntryDate() + "\tÖğrenci numarası : "
                             + yazilim.hashCode() + "\tFakülte : " + yazilim.getFakulte());
                 }
+                System.out.println("\nMenüye gitmek için 1 e basın");
+                switch (inp.nextInt()) {
+                    case 1:
+                        menu();
+                        break;
+                    default:
+                        break;
+                }
                 break;
             case 5:
-                System.out.println("\t\t-----Elektrik Mühendisliği-----");
+                System.out.println("\n\t\t-----Elektrik Mühendisliği-----");
                 for (Elektrik yazilim : elektrik) {
                     System.out.println("Öğrencinin ismi :" + yazilim.getOgrenciAd() + " " + yazilim.getOgrenciSoyad()
                             + "\tGiriş tarihi : " + yazilim.getEntryDate() + "\tÖğrenci numarası : "
                             + yazilim.hashCode() + "\tFakülte : " + yazilim.getFakulte());
                 }
+                System.out.println("\nMenüye gitmek için 1 e basın");
+                switch (inp.nextInt()) {
+                    case 1:
+                        menu();
+                        break;
+                    default:
+                        break;
+                }
                 break;
             case 6:
-                System.out.println("\t\t------Bütün bölümler------\n");
+                System.out.println("\n\t\t------Bütün bölümler------\n");
                 System.out.println("\t\t-----Yazılım Mühendisliği-----");
                 for (Yazilim yazilim : yzlm) {
                     System.out.println("Öğrencinin ismi :" + yazilim.getOgrenciAd() + " " + yazilim.getOgrenciSoyad()
                             + "\tGiriş tarihi : " + yazilim.getEntryDate() + "\tÖğrenci numarası : "
                             + yazilim.hashCode() + "\tFakülte : " + yazilim.getFakulte());
                 }
-                System.out.println("\t\t-----Mekatronik Mühendisliği-----");
+                System.out.println("\n\t\t-----Mekatronik Mühendisliği-----");
                 for (Mekatronik yazilim : mek) {
                     System.out.println("Öğrencinin ismi :" + yazilim.getOgrenciAd() + " " + yazilim.getOgrenciSoyad()
                             + "\tGiriş tarihi : " + yazilim.getEntryDate() + "\tÖğrenci numarası : "
                             + yazilim.hashCode() + "\tFakülte : " + yazilim.getFakulte());
                 }
-                System.out.println("\t\t-----Makine Mühendisliği-----");
+                System.out.println("\n\t\t-----Makine Mühendisliği-----");
                 for (Makine yazilim : makine) {
                     System.out.println("Öğrencinin ismi :" + yazilim.getOgrenciAd() + " " + yazilim.getOgrenciSoyad()
                             + "\tGiriş tarihi : " + yazilim.getEntryDate() + "\tÖğrenci numarası : "
                             + yazilim.hashCode() + "\tFakülte : " + yazilim.getFakulte());
                 }
-                System.out.println("\t\t-----Enerji Sistemleri Mühendisliği-----");
+                System.out.println("\n\t\t-----Enerji Sistemleri Mühendisliği-----");
                 for (Enerji yazilim : enerji) {
                     System.out.println("Öğrencinin ismi :" + yazilim.getOgrenciAd() + " " + yazilim.getOgrenciSoyad()
                             + "\tGiriş tarihi : " + yazilim.getEntryDate() + "\tÖğrenci numarası : "
                             + yazilim.hashCode() + "\tFakülte : " + yazilim.getFakulte());
                 }
-                System.out.println("\t\t-----Elektrik Mühendisliği-----");
+                System.out.println("\n\t\t-----Elektrik Mühendisliği-----");
                 for (Elektrik yazilim : elektrik) {
                     System.out.println("Öğrencinin ismi :" + yazilim.getOgrenciAd() + " " + yazilim.getOgrenciSoyad()
                             + "\tGiriş tarihi : " + yazilim.getEntryDate() + "\tÖğrenci numarası : "
                             + yazilim.hashCode() + "\tFakülte : " + yazilim.getFakulte());
                 }
+                System.out.println("\nMenüye gitmek için 1 e basın");
+                switch (inp.nextInt()) {
+                    case 1:
+                        menu();
+                        break;
+                    default:
+                        break;
+                }
+                break;
+            case 7:
+                menu();
                 break;
 
             default:
-            System.out.println("Hatalı giriş");
+                System.out.println("Hatalı giriş");
                 break;
         }
     }
