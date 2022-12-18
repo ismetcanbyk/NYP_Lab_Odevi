@@ -6,6 +6,7 @@ public class Yazilim extends Student {
     public Yazilim(String ogrenciAd, String ogrenciSoyad, int entryDate, String fakulte) {
         super(ogrenciAd, ogrenciSoyad, entryDate, fakulte);
         setBolum("Yazılım Mühendisliği");
+       
     }
 
     @Override
