@@ -14,7 +14,7 @@ public class Main {
     public static void main(String[] args) {
 
         Yazilim y1 = new Yazilim("İsmet", "Bıyık", 2021, "hfttf");
-        Yazilim y2 = new Yazilim("Can", "Karataş", 2020, "hfttf");
+        Yazilim y2 = new Yazilim("Can", "Bıyık", 2020, "hfttf");
         Mekatronik m = new Mekatronik("Ahmet", "Yılmaz", 2019, "hfttf");
         Enerji e1 = new Enerji("Furkan", "Aslan", 2017, "hfttf");
         Makine mak1 = new Makine("Alperen", "Öz", 2018, "hfttf");
